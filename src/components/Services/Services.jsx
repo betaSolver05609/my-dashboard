@@ -4,9 +4,13 @@ import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import "./Services.css";
 import Cards from '../Cards/Cards';
+import {motion} from 'framer-motion';
 const Services = () => {
+
+    const transition= {duration: 2, type: 'spring'}
+
     return (
-        <div className="services">
+        <div className="services" id='Services'>
             {/* Left Side */}
             <div className="awesome">
             <span>My Awesome</span>
@@ -21,26 +25,41 @@ const Services = () => {
             </div>
             <div className="blur s-blur1" style={{ background: '#ABF1FF94' }}></div>
             {/* Right Side */}
-            <div className="cards" style={{left: '14rem'}}>
+            <motion.div 
+            initial={{left: '25%'}}
+            whileInView={{left: '14rem'}}
+            transtion={transition}
+            className="cards" 
+            >
                 <Cards
                 image={HeartEmoji}
                 heading={'Design'}
                 detail={'Python Java NodeJS Jenkins React Angular AWS'}
                 />
-            </div>
-            <div className="cards" style={{top: '12rem', left: '-4rem'}}>
+            </motion.div>
+            <motion.div 
+             initial={{ left: "-11rem", top: "12rem" }}
+             whileInView={{ left: "-4rem" }}
+             transition={transition}
+            className="cards" 
+            >
                 <Cards
                 image={Glasses}
                 heading={'Developer'}
                 details={"HTML, JavaScript/TypeScript React, CSS"}
                 />
-            </div>
-            <div className="cards" style={{top: '19rem', left: '12rem'}}>
+            </motion.div>
+            <motion.div 
+             initial={{ top: "19rem", left: "25rem" }}
+             whileInView={{ left: "12rem" }}
+             transition={transition}
+            className="cards" 
+            >
                 <Cards
                 image={Humble}
                 heading={'UI/UX'}
                 details={'Some Dummy Text to be filled up later'}/>
-            </div>
+            </motion.div>
             <div className="blur s-blur2" style={{background: 'var(--purple)'}}></div>
 
         </div>
