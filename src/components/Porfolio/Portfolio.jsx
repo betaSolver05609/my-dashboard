@@ -4,12 +4,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 const portfolioItems = [
     {
         title: "FarmLine - Livestock Booking",
-        src: "/portfolio/farmline.png",
+        src: "portfolio/farmline.png",
         url: "https://farmers.morrisons.com",
     },
     {
         title: "Morrisons Production App",
-        src: "/portfolio/production-app.png",
+        src: "portfolio/production-app.png",
         url: "https://manufacturing.apps.mymorri.com",
     },
 ];

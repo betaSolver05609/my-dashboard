@@ -7,9 +7,9 @@ const Publications = () => {
         <div className="pub-pdf-card">
           <iframe
             title="Publication PDF Preview"
-            src="/publications/2508.21073v1.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            src="publications/2508.21073v1.pdf#toolbar=0&navpanes=0&scrollbar=0"
           />
-          <a href="/publications/2508.21073v1.pdf" download className="button pub-download">
+          <a href="publications/2508.21073v1.pdf" download className="button pub-download">
             Download PDF
           </a>
         </div>

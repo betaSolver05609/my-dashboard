@@ -2,10 +2,10 @@ import React from 'react';
 import { motion } from "framer-motion";
 
 const companyLogos = [
-    { name: "Verizon", src: "/logos/verizon.svg" },
-    { name: "Centene", src: "/logos/centene.svg" },
-    { name: "Morrisons", src: "/logos/morrisons.svg" },
-    { name: "TCS", src: "/logos/tcs.svg" },
+    { name: "Verizon", src: "logos/verizon.svg" },
+    { name: "Centene", src: "logos/centene.svg" },
+    { name: "Morrisons", src: "logos/morrisons.svg" },
+    { name: "TCS", src: "logos/tcs.svg" },
 ];
 
 const Work = () => {

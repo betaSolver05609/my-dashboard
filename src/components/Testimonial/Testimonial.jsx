@@ -6,25 +6,25 @@ const Testimonial=()=> {
     const clients = [
         {
           company: "Morrisons",
-          img: "/logos/morrisons.svg",
+          img: "logos/morrisons.svg",
           review:
             "Delivered production-ready features with strong ownership and speed. The quality of execution helped us move faster without compromising reliability.",
         },
         {
           company: "TCS",
-          img: "/logos/tcs.svg",
+          img: "logos/tcs.svg",
           review:
             "Demonstrated deep engineering discipline across full-stack delivery and collaboration. Consistently converted complex requirements into maintainable solutions.",
         },
         {
           company: "Verizon",
-          img: "/logos/verizon.svg",
+          img: "logos/verizon.svg",
           review:
             "Brought a practical, results-driven approach to building scalable systems. Communication and technical rigor made delivery smooth across teams.",
         },
         {
           company: "Centene",
-          img: "/logos/centene.svg",
+          img: "logos/centene.svg",
           review:
             "Strong backend and platform skills with clear focus on security and performance. Contributions directly improved system stability and developer velocity.",
         },

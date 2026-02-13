@@ -15,6 +15,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "predeploy": "next build",
+    "deploy": "gh-pages -d out --dotfiles"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
