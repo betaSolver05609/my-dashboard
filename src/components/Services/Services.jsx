@@ -2,7 +2,6 @@ import React from 'react';
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
-import "./Services.css";
 import Cards from '../Cards/Cards';
 import {motion} from 'framer-motion';
 const Services = () => {
@@ -16,9 +15,9 @@ const Services = () => {
             <span>My Awesome</span>
             <span>Services</span>
             <spane>
-                Lorem ispum is simpley dummy text of printing of printing Lorem
+                As a full Stack developer, I work with a wide range of technologies and tools 
                 <br />
-            ispum is simpley dummy text of printing
+            to create Softwares and Systems
             </spane>
 
             <button className="button s-button"> Download CV</button>
@@ -32,9 +31,9 @@ const Services = () => {
             className="cards" 
             >
                 <Cards
-                image={HeartEmoji}
-                heading={'Design'}
-                detail={'Python Java NodeJS Jenkins React Angular AWS'}
+                image={HeartEmoji.src}
+                heading={'Programming Languages'}
+                detail={'Python Java JavaScript C++'}
                 />
             </motion.div>
             <motion.div 
@@ -44,9 +43,9 @@ const Services = () => {
             className="cards" 
             >
                 <Cards
-                image={Glasses}
-                heading={'Developer'}
-                details={"HTML, JavaScript/TypeScript React, CSS"}
+                image={Glasses.src}
+                heading={'Frameworks'}
+                detail={"React Next Angular SpringBoot SpringJPA SpringSecurity, Express, Flask" }
                 />
             </motion.div>
             <motion.div 
@@ -56,9 +55,9 @@ const Services = () => {
             className="cards" 
             >
                 <Cards
-                image={Humble}
-                heading={'UI/UX'}
-                details={'Some Dummy Text to be filled up later'}/>
+                image={Humble.src}
+                heading={'Cloud Platforms'}
+                detail={'AWS, terraform, docker, kubernetes, Kafka'}/>
             </motion.div>
             <div className="blur s-blur2" style={{background: 'var(--purple)'}}></div>
 

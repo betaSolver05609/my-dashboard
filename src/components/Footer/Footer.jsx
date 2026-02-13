@@ -1,18 +1,13 @@
 import React from 'react';
-import './Footer.css';
 import Wave from '../../img/wave.png';
-import Insta from '@iconscout/react-unicons/icons/uil-instagram';
-import Facebook from '@iconscout/react-unicons/icons/uil-facebook';
-import Github from '@iconscout/react-unicons/icons/uil-github';
+import { UilGithub as Github } from '@iconscout/react-unicons';
 const Footer=()=>{
     return (
         <div className="footer">
-            <img src={Wave} alt="" style={{width: '100%'}}></img>
+            <img src={Wave.src} alt="" style={{width: '100%'}}></img>
             <div className="f-content">
-                <span>someindrasingh795@gmail.com</span>
+                <span>someindras@gmail.com</span>
                 <div className="f-icons">
-                    <Insta color='white' size='3rem'/>
-                    <Facebook color='white' size='3rem' />
                     <Github color='white' size='3rem' />
                 </div>
             </div>

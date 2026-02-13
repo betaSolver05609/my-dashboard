@@ -1,11 +1,13 @@
 import React from 'react';
-import './Work.css';
-import Upwork from "../../img/Upwork.png";
-import Fiverr from "../../img/fiverr.png";
-import Amazon from "../../img/amazon.png";
-import Shopify from "../../img/Shopify.png";
-import Facebook from "../../img/Facebook.png";
 import { motion } from "framer-motion";
+
+const companyLogos = [
+    { name: "Verizon", src: "/logos/verizon.svg" },
+    { name: "Centene", src: "/logos/centene.svg" },
+    { name: "Morrisons", src: "/logos/morrisons.svg" },
+    { name: "TCS", src: "/logos/tcs.svg" },
+];
+
 const Work = () => {
     return (
         <div className="work">
@@ -14,16 +16,18 @@ const Work = () => {
                 <span>Worked For All These</span>
                 <span>Brands & Clients </span>
                 <span>
-                    Lorem ispum is simpley dummy text of printing of printing Lorem
+                    Delivered enterprise-grade software across retail, telecom, and healthcare domains.
                 <br />
-                ispum is simpley dummy text of printing
+                Built scalable full-stack systems with focus on performance, security, and maintainability.
                 <br />
-                ispum is simpley dummy text of printing
+                Collaborated with cross-functional teams to ship reliable features from design to production.
                 <br />
-                Lorem ispum is simpley dummy text of printing of printing Lorem
+                Strong ownership mindset with consistent on-time delivery and measurable business impact.
             </span>
 
-                <button className="button s-button"> Hire Me.!</button>
+                <a href="https://www.linkedin.com/in/someindra-kumar-singh-329300117/" target="_blank" rel="noreferrer">
+                    <button className="button s-button"> Hire Me.!</button>
+                </a>
             </div>
             <div className="blur s-blur1" style={{ background: '#ABF1FF94' }}></div>
 
@@ -36,21 +40,14 @@ const Work = () => {
                     transition={{ duration: 3.5, type: "spring" }}
                     className="w-mainCircle"
                 >
-                    <div className="w-secCircle">
-                        <img src={Upwork} alt=""></img>
-                    </div>
-                    <div className="w-secCircle">
-                        <img src={Fiverr} alt=""></img>
-                    </div>
-                    <div className="w-secCircle">
-                        <img src={Amazon} alt=""></img>
-                    </div>
-                    <div className="w-secCircle">
-                        <img src={Shopify} alt=""></img>
-                    </div>
-                    <div className="w-secCircle">
-                        <img src={Facebook} alt=""></img>
-                    </div>
+                    {companyLogos.map((company) => (
+                        <div
+                            className={`w-secCircle ${company.name === "TCS" ? "w-secCircle-tcs" : ""}`}
+                            key={company.name}
+                        >
+                            <img src={company.src} alt={`${company.name} logo`}></img>
+                        </div>
+                    ))}
 
                     {/* Background Circle */}
 

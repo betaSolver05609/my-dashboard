@@ -1,35 +1,32 @@
 import React from 'react';
-import './Testimonial.css';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
 import { Pagination } from "swiper";
-import "swiper/css/pagination";
-import profilePic1 from "../../img/profile1.jpg";
-import profilePic2 from "../../img/profile2.jpg";
-import profilePic3 from "../../img/profile3.jpg";
-import profilePic4 from "../../img/profile4.jpg";
 const Testimonial=()=> {
 
     const clients = [
         {
-          img: profilePic1,
+          company: "Morrisons",
+          img: "/logos/morrisons.svg",
           review:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+            "Delivered production-ready features with strong ownership and speed. The quality of execution helped us move faster without compromising reliability.",
         },
         {
-          img: profilePic2,
+          company: "TCS",
+          img: "/logos/tcs.svg",
           review:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+            "Demonstrated deep engineering discipline across full-stack delivery and collaboration. Consistently converted complex requirements into maintainable solutions.",
         },
         {
-          img: profilePic3,
+          company: "Verizon",
+          img: "/logos/verizon.svg",
           review:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+            "Brought a practical, results-driven approach to building scalable systems. Communication and technical rigor made delivery smooth across teams.",
         },
         {
-          img: profilePic4,
+          company: "Centene",
+          img: "/logos/centene.svg",
           review:
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex officiis molestiae quod tempora laudantium, cumque error a nisi placeat quae exercitationem, maiores reiciendis! Eaque dicta minima, iure maiores dolorum sed.",
+            "Strong backend and platform skills with clear focus on security and performance. Contributions directly improved system stability and developer velocity.",
         },
       ];
 
@@ -53,7 +50,8 @@ const Testimonial=()=> {
                 return (
                     <SwiperSlide key={index}>
                         <div className="testimonial">
-                            <img src={client.img} alt=""></img>
+                            <img src={client.img} alt={`${client.company} logo`}></img>
+                            <h4>{client.company}</h4>
                             <span>{client.review}</span>
                         </div>
                     </SwiperSlide>

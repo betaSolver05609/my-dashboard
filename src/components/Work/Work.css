@@ -35,16 +35,11 @@
 }
 
 .w-mainCircle>:nth-child(3) {
-    left: 6rem;
-    top: 5rem;
-}
-
-.w-mainCircle>:nth-child(4) {
     left: 15rem;
     top: 5rem;
 }
 
-.w-mainCircle>:nth-child(5) {
+.w-mainCircle>:nth-child(4) {
     left: 6rem;
     top: 13rem;
 }
@@ -63,7 +58,14 @@
 }
 
 .w-secCircle>img {
-    transform: scale(0.6);
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+.w-secCircle-tcs {
+    background: #1f2f56;
+    border-color: #1f2f56;
 }
 
 .w-backCircle {

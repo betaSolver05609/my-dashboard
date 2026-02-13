@@ -1,11 +1,18 @@
 import React from 'react';
-import './Portfolio.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import Sidebar from "../../img/sidebar.PNG";
-import Ecommerce from "../../img/ecommerce.png";
-import HOC from "../../img/hoc.png";
-import MusicApp from "../../img/musicapp.png";
+
+const portfolioItems = [
+    {
+        title: "FarmLine - Livestock Booking",
+        src: "/portfolio/farmline.png",
+        url: "https://farmers.morrisons.com",
+    },
+    {
+        title: "Morrisons Production App",
+        src: "/portfolio/production-app.png",
+        url: "https://manufacturing.apps.mymorri.com",
+    },
+];
 
 const Portfolio=()=> {
     return (
@@ -16,22 +23,22 @@ const Portfolio=()=> {
             {/* slider */}
             <Swiper
             spaceBetween={30}
-            slidesPerView={3}
+            slidesPerView={2}
             grabCursor={true}
             className="portfolio-slider"
+            breakpoints={{
+                0: { slidesPerView: 1 },
+                1100: { slidesPerView: 2 },
+            }}
             >
-                <SwiperSlide>
-                    <img src={Sidebar} alt=""></img>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={Ecommerce} alt=""></img>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={HOC} alt=""></img>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={MusicApp} alt=""></img>
-                </SwiperSlide>
+                {portfolioItems.map((item) => (
+                    <SwiperSlide key={item.title}>
+                        <a href={item.url} target="_blank" rel="noreferrer" className="portfolio-shot-card">
+                            <img src={item.src} alt={item.title}></img>
+                            <span>{item.title}</span>
+                        </a>
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     )

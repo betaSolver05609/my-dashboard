@@ -1,5 +1,4 @@
 import React from 'react';
-import './Cards.css'
 const Cards=({image, heading, detail})=>{
     return (
         <div className="card">

@@ -49,6 +49,12 @@
     transform: scale(0.5);
 }
 
+.i-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .i-icons>:hover{
     cursor: pointer;
 }
